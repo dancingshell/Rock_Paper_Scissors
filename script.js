@@ -1,38 +1,94 @@
- function changeRock() {
-  if (document.getElementById("clickrock").src = "image_source/rock.jpg") 
+ 
+function changeImage(user_choice) {
+  var user = ""
+  var comp = ""
+  if (user_choice == "rock") 
   {
-      document.getElementById("paper").style.display = "none";
-      document.getElementById("scissors").style.display = "none";
-      document.getElementById("rock").style.margin="0 auto";
+    document.getElementById("paper").style.display = "none";
+    document.getElementById("scissors").style.display = "none";
+    document.getElementById("rock").style.margin= "0 auto";
+    user = "rock";
+    randomChoice(user_choice);
+   } 
+  else if (user_choice == "paper")  
+  {
+    document.getElementById("rock").style.display = "none";
+    document.getElementById("scissors").style.display = "none";
+    document.getElementById("paper").style.margin= "0 auto";
+    user = "paper";
+    randomChoice(user_choice);
   }
+  else if (user_choice == "scissors") 
+  {
+    document.getElementById("rock").style.display = "none";
+    document.getElementById("paper").style.display = "none";
+    document.getElementById("scissors").style.margin= "0 auto";
+    user = "scissors";
+    randomChoice(user_choice);
+  }
+  else{}
 }
 
-function changePaper() {
-  if (document.getElementById("clickpaper").src = "image_source/paper.png") 
+function randomChoice(user_choice) {
+  var random_number = Math.floor((Math.random() * 100) + 1);
+  alert(user_choice + "chose this!");
+  if (random_number <= 33) 
   {
-      document.getElementById("rock").style.display = "none";
-      document.getElementById("scissors").style.display = "none";
-      document.getElementById("paper").style.margin="0 auto";
+    comp = "rock";
   }
+  else if (random_number > 33 && random_number <= 66)
+  {
+    comp = "paper";
+  }
+  else 
+  {
+    comp = "scissors";
+  }
+  game(user_choice, comp);
 }
 
-function changeScissors() {
-  if (document.getElementById("clickscissors").src = "image_source/scissors.png") 
-  {
-      document.getElementById("rock").style.display = "none";
-      document.getElementById("paper").style.display = "none";
-      document.getElementById("scissors").style.margin="0 auto";
+function game(user_choice, comp_choice) {
+
+  alert("You chose " + user_choice);
+  alert("The computer chose " + comp_choice);
+  if (user_choice == "rock") {
+
+    if (comp_choice == "rock") {
+      alert("You TIED :/")
+    }
+    else if (comp_choice == "paper") {
+      alert("You LOST :(")
+    }
+    else if (comp_choice == "scissors") {
+      alert("You WON :)")
+    }
   }
+
+  else if (user_choice == "paper") {
+    if (comp_choice == "rock") {
+      alert("You WON :)")
+    }
+    else if (comp_choice == "paper") {
+      alert("You TIED :/")
+    }
+    else if (comp_choice == "scissors"){
+      alert("You LOST :(")
+    }
+  }
+
+  else if (user_choice == "scissors") {
+    if (comp_choice == "rock") {
+      alert("You LOST :(")
+    }
+    else if (comp_choice == "paper") {
+      alert("You WON :)")
+    }
+    else if (comp_choice == "scissors") {
+      alert("You TIED :/")
+    }
+  }
+  
 }
 
-// var imgObj = null;
-// var animate ;
-// function init(){
-//    imgObj = document.getElementById('clickrock');
-//    imgObj.style.position= 'relative'; 
-//    imgObj.style.left = '0px'; 
-// }
-// function moveRight(){
-//    imgObj.style.left = parseInt(imgObj.style.left) + 100 + 'px';
-//    animate = setTimeout(moveRight,20); // call moveRight in 20msec
-// }
+
+
