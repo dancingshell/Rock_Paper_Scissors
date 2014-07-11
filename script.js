@@ -1,25 +1,30 @@
- function changeImage() {
+ function changeRock() {
 
   if (document.getElementById("clickrock").src = "image_source/rock.jpg") 
   {
-      document.getElementById("clickpaper").src = "";
-      document.getElementById("clickscissors").src = "";
+      document.getElementById("clickpaper").style.display = "none";
+      document.getElementById("clickscissors").style.display = "none";
       document.getElementById("paper").style.border = 0;
-      document.getElementById("scissors").style.border = 0
+      document.getElementById("scissors").style.border = 0;
   }
-  else if (document.getElementById("clickpaper").src = "image_source/paper.png") 
+}
+
+function changePaper() {
+  if (document.getElementById("clickpaper").src = "image_source/paper.png") 
   {
-      document.getElementById("clickrock").src = "";
-      document.getElementById("clickscissors").src = "";
+      document.getElementById("clickrock").style.display = "none";
+      document.getElementById("clickscissors").style.display = "none";
       document.getElementById("rock").style.border = 0;
       document.getElementById("scissors").style.border = 0;
   }
-  else if (document.getElementById("clickscissors").src = "image_source/scissors.png") 
+}
+
+function changeScissors() {
+  if (document.getElementById("clickscissors").src = "image_source/scissors.png") 
   {
-      document.getElementById("clickrock").src = "";
-      document.getElementById("clickpaper").src = "";
+      document.getElementById("clickrock").style.display = "none";
+      document.getElementById("clickpaper").style.display = "none";
       document.getElementById("rock").style.border = 0;
       document.getElementById("paper").style.border = 0;
   }
- 
 }

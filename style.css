@@ -37,18 +37,18 @@
       width:200px;
       outline: none;
     }
-    #elements div img:active, #elements div{
+    #elements div img:active, #elements div:active{
       outline:none;
     }
 
-    #elements div img:focus, #elements div{
+    #elements div img:focus, #elements div:focus{
       outline: none;
       outline-style: none;
       -webkit- outline-style: none;
       -moz-outline-style: none;
     }
 
-    img { border-style: none; }
+    img:focus { border-style: none; }
 
     @media (max-width: 480px) {
       #elements div {
@@ -57,7 +57,7 @@
       }
     }
 
-    :focus {
+   img:focus {
     outline: 5px solid blue!important;
   }
 
