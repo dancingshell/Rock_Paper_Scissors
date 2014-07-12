@@ -1,13 +1,11 @@
 
 function changeImage(user_choice) {
-  var user = "";
-  var comp = "";
+
   if (user_choice == "rock") 
   {
     document.getElementById("paper").style.display = "none";
     document.getElementById("scissors").style.display = "none";
     document.getElementById("rock").style.margin= "0 auto";
-    user = "rock";
     randomChoice(user_choice);
    } 
   else if (user_choice == "paper")  
@@ -15,7 +13,6 @@ function changeImage(user_choice) {
     document.getElementById("rock").style.display = "none";
     document.getElementById("scissors").style.display = "none";
     document.getElementById("paper").style.margin= "0 auto";
-    user = "paper";
     randomChoice(user_choice);
   }
   else if (user_choice == "scissors") 
@@ -23,7 +20,6 @@ function changeImage(user_choice) {
     document.getElementById("rock").style.display = "none";
     document.getElementById("paper").style.display = "none";
     document.getElementById("scissors").style.margin= "0 auto";
-    user = "scissors";
     randomChoice(user_choice);
   }
   else{}
@@ -38,7 +34,7 @@ function randomChoice(user_choice) {
   {
     comp = "rock";
   }
-  else if (random_number > first_third && random_number <= second_third)
+  else if (random_number > first_third && random_number <= second_third )
   {
     comp = "paper";
   }
@@ -92,8 +88,8 @@ function game(user_choice, comp_choice) {
   document.getElementById("play_again").innerHTML="Play Again";
 }
 
-  function reset(){
-    location.reload();
+function reset() {
+  location.reload();
 }  
 
 
