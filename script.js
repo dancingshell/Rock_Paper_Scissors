@@ -47,54 +47,62 @@ function randomChoice(user_choice) {
 }
 
 function game(user_choice, comp_choice) {
+  document.getElementById("user_result").innerHTML="You chose " + user_choice + ".";
+  document.getElementById("comp_result").innerHTML="The computer chose " + comp_choice + ".";
+  // alert("You chose " + user_choice + ".");
+  // alert("The computer chose " + comp_choice + ".");
 
-  alert("You chose " + user_choice + ".");
-  alert("The computer chose " + comp_choice + ".");
   if (user_choice == "rock") {
 
     if (comp_choice == "rock") {
-      alert("You TIED :/")
+      document.getElementById("final_result").innerHTML="You TIED :/";
+      // alert("You TIED :/")
     }
     else if (comp_choice == "paper") {
-      alert("You LOST :(")
+      document.getElementById("final_result").innerHTML="You LOST :(";
+      // alert("You LOST :(")
     }
     else if (comp_choice == "scissors") {
-      alert("You WON :)")
+      document.getElementById("final_result").innerHTML="You WON! :)";
+      // alert("You WON :)")
     }
   }
 
   else if (user_choice == "paper") {
     if (comp_choice == "rock") {
-      alert("You WON :)")
+      document.getElementById("final_result").innerHTML="You WON! :)";
+      // alert("You WON :)")
     }
     else if (comp_choice == "paper") {
-      alert("You TIED :/")
+      document.getElementById("final_result").innerHTML="You TIED :/";
+      // alert("You TIED :/")
     }
     else if (comp_choice == "scissors"){
-      alert("You LOST :(")
+      document.getElementById("final_result").innerHTML="You LOST :(";
+      // alert("You LOST :(")
     }
   }
 
   else if (user_choice == "scissors") {
     if (comp_choice == "rock") {
-      alert("You LOST :(")
+      document.getElementById("final_result").innerHTML="You LOST :(";
+      // alert("You LOST :(")
     }
     else if (comp_choice == "paper") {
-      alert("You WON :)")
+      document.getElementById("final_result").innerHTML="You WON! :)";
+      // alert("You WON :)")
     }
     else if (comp_choice == "scissors") {
-      alert("You TIED :/")
+      document.getElementById("final_result").innerHTML="You TIED :/";
+      // alert("You TIED :/")
     }
   }
-
-  var play_again = window.confirm("Would you like to play again?")
-  if (play_again == true) {
-    location.reload();
-  } 
-  else {
-    alert("Thanks for playing!");
-  }
+  document.getElementById("play_again").innerHTML="Want to play again?";
 }
+
+  function reset(){
+    location.reload();
+}  
 
 
 
