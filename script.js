@@ -1,7 +1,7 @@
- 
+
 function changeImage(user_choice) {
-  var user = ""
-  var comp = ""
+  var user = "";
+  var comp = "";
   if (user_choice == "rock") 
   {
     document.getElementById("paper").style.display = "none";
@@ -30,8 +30,7 @@ function changeImage(user_choice) {
 }
 
 function randomChoice(user_choice) {
-  var random_number = Math.floor((Math.random() * 100) + 1);
-  alert(user_choice + "chose this!");
+  var random_number = Math.floor((Math.random() * 100));
   if (random_number <= 33) 
   {
     comp = "rock";
@@ -49,8 +48,8 @@ function randomChoice(user_choice) {
 
 function game(user_choice, comp_choice) {
 
-  alert("You chose " + user_choice);
-  alert("The computer chose " + comp_choice);
+  alert("You chose " + user_choice + ".");
+  alert("The computer chose " + comp_choice + ".");
   if (user_choice == "rock") {
 
     if (comp_choice == "rock") {
@@ -87,7 +86,14 @@ function game(user_choice, comp_choice) {
       alert("You TIED :/")
     }
   }
-  
+
+  var play_again = window.confirm("Would you like to play again?")
+  if (play_again == true) {
+    location.reload();
+  } 
+  else {
+    alert("Thanks for playing!");
+  }
 }
 
 
