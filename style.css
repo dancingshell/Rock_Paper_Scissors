@@ -30,6 +30,7 @@
       
       outline: none;*/
     }
+
   
     #elements div img {
       margin: 0px 5px;
@@ -39,7 +40,7 @@
       width:200px;
       outline: none;
     }
-    #elements div img:active, #elements div:active{
+ /*   #elements div img:active, #elements div:active{
       outline:none;
     }
 
@@ -50,7 +51,16 @@
       -moz-outline-style: none;
     }
 
-    img:focus { border-style: none; }
+    img:focus { border-style: none; }*/
+
+    article div {
+      margin: 0 auto;
+    }
+
+    #clickuser, #clickcomp{
+     display: none;
+  
+    }
 
     @media (max-width: 480px) {
       #elements div {
@@ -59,10 +69,10 @@
       }
     }
 
-   img:focus {
+ /*  img:focus {
     outline: 5px solid blue!important;
   }
-
+*/
 
 
 
