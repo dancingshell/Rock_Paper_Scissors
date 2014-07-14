@@ -11,9 +11,9 @@
     <article>
       <div id="user"><img src="" id="clickuser" onclick=""/></div>
 
-      <div id="rock"><img src="image_source/rock.jpg" id="clickrock" onclick="randomChoice('rock')"/></div>
-      <div id="paper"><img src="image_source/paper.png" id="clickpaper" onclick="randomChoice('paper')"/></div>
-      <div id="scissors"><img src="image_source/scissors.png" id="clickscissors" onclick="randomChoice('scissors')"/></div>
+      <div id="rock"><img src="image_source/rock.jpg" id="clickrock" onclick="dots('rock')"/></div>
+      <div id="paper"><img src="image_source/paper.png" id="clickpaper" onclick="dots('paper')"/></div>
+      <div id="scissors"><img src="image_source/scissors.png" id="clickscissors" onclick="dots('scissors')"/></div>
 
       <div id="computer"><img src="" id="clickcomp" onclick=""/></div>
     </article> 
@@ -21,7 +21,7 @@
   <h2 id="user_result"></h2>
   <h2 id="comp_result"></h2>
   <h1 id="final_result"></h1>
-  <h3 id="play_again" onclick="reset()"></h3>
+  <div id="refresh"><h3 id="play_again" onmouseover="border()" onmouseout="borderOff()" onclick="reset()"></h3></div>
 
 </body>
 </html>
